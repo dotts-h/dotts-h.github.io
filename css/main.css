@@ -16,7 +16,7 @@ body {
 blockquote, q {
     quotes: none;
 }
-blockquote:before, blockquote:after, q::before, q::after {
+blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none;
 }
@@ -38,7 +38,7 @@ a img {
 /* GLOBAL STYLES */
 html {
     box-shadow: 0 0 0 30px #000 inset;
-    padding-top: 0 30px;
+    padding: 0 30px;
 }
 body {
     display: flex;
@@ -90,6 +90,7 @@ h2 ~ p {
     box-sizing: border-box;
     display: block;
     height: 10vh;
+    left: -30px;
     padding-top: 10px;
     position: relative; 
     text-align: center;
@@ -162,7 +163,7 @@ h2 ~ p {
 /* COLUMN STYLES */
 .col-three {
     display: flex;
-    flex: 1;
+    flex: 1 1 0;
 }
 .col {
     box-sizing: border-box;
@@ -190,7 +191,7 @@ h2 ~ p {
 }
 .full-hero:after {
     bottom: 2vh;
-    border: 10px solid;
+    border: 10px solid #000;
     border-color: #fff transparent transparent;
     content: "";
     height: 0;
@@ -281,8 +282,9 @@ h2 ~ p {
     text-transform: uppercase;
 }
 .callout-copy {
-    flex: 0 0 45em;
+    flex: 0 0 50%;
     font-size: 0.8rem;
+    max-width: 600px;
     padding: 0 3vw;
 }
 
